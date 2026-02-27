@@ -1,0 +1,28 @@
+{
+  "name": "cibosync",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-powered WhatsApp Waste & Revenue Agent for Italian restaurants",
+  "scripts": {
+    "dev": "pnpm --parallel dev",
+    "build": "pnpm --parallel build",
+    "lint": "pnpm --parallel lint",
+    "test": "pnpm --parallel test",
+    "dev:api": "pnpm --filter @cibosync/api dev",
+    "dev:web": "pnpm --filter @cibosync/web dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.0"
+  },
+  "packageManager": "pnpm@8.14.0",
+  "pnpm": {
+    "overrides": {
+      "typescript": "^5.3.3"
+    }
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
